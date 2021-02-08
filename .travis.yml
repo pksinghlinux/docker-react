@@ -5,4 +5,4 @@ before_install:
   - docker build -t pksinghlinux/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run pksinghlinux/docker-react npm run test -- --coverage
+  - docker run pksinghlinux/docker-react npm run test --watchAll=false
