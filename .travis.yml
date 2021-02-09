@@ -4,5 +4,10 @@ service:
 before_install:
   - docker build -t pksinghlinux/docker-react -f Dockerfile.dev .
 
-deploy:
+script:
+  - docker run -e CI=true pksinghlinux/docker-react npm run test -- --coverage
+  
+
+
+
 
